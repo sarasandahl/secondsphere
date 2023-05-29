@@ -8,7 +8,10 @@
     <title>SecondSphere</title>
 </head>
 <body>
+<div class="header-container">
     <h1>SecondSphere</h1>
 
-<?php
+    <?php
     include 'partials/nav.php';
+    ?>
+</div>
