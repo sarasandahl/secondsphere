@@ -1,17 +1,17 @@
 <?php
 
-require 'classes/views/user-view.php';
+require 'classes/views/users-view.php';
 require 'classes/db.php';
-require 'classes/models/user-model.php';
+require 'classes/models/users-model.php';
 
 $pdo = require 'partials/connect.php';
 
 $db = new DB($pdo);//ska den vara här?
-$userModel = new UserModel($pdo);
-$userView = new UserView();
+$usersModel = new UsersModel($pdo);
+$usersView = new UsersView();
 
 // ==============================================
-// Skapa vy nedan
+// vy nedan
 
 include 'partials/header.php';
 
@@ -20,7 +20,7 @@ include 'partials/header.php';
 
 <h1>Säljare</h1>
 <?php
-    $userView->renderAllUsersAsList($userModel->getAllUsers());
+    $usersView->renderAllUsersAsList($usersModel->getAllUsers());
 ?>
 
 <button>Ny Säljare</button>

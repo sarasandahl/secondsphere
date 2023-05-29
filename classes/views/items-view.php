@@ -1,6 +1,6 @@
 <?php
 
-class ItemView {
+class ItemsView {
 
     public function renderAllItemsAsList(array $items):void {
         echo "<ul>";

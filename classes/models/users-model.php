@@ -1,6 +1,6 @@
 <?php
 
-class UserModel extends DB {
+class UsersModel extends DB {
 
     protected $table = "users";
 

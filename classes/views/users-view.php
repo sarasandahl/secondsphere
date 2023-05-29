@@ -1,6 +1,6 @@
 <?php
 
-class UserView {
+class UsersView {
 
     public function renderAllUsersAsList(array $users):void {
         echo "<ul>";

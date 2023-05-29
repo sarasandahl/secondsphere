@@ -1,6 +1,6 @@
 <?php
 
-class ItemModel extends DB {
+class ItemsModel extends DB {
 
     protected $table = "items";
 

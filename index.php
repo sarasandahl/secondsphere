@@ -5,7 +5,7 @@
 $pdo = require 'partials/connect.php'; //behöver den vara här?
 
 // ==============================================
-// Skapa vy nedan
+// vy nedan
 
 include 'partials/header.php';
 
@@ -19,7 +19,6 @@ include 'partials/header.php';
 
 <?php
 
-//$userView->renderAllUsersAsList($userModel->getAllUsers());
-// gör om för tre tabeller!
+
 
 include 'partials/footer.php';
