@@ -10,6 +10,6 @@ class SingleItemView {
             Storlek: {$item['size']}, 
             Pris: {$item['price']} kr,
             Skick:
-            </p>";
+            </p>"; //skick ska kopplas på med skick-tabellen och dynamiskt skriva ut skick utifrån valt skick i formuläret
     }
 }
