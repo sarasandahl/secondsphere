@@ -24,3 +24,31 @@ Framtida funktioner
 2. Visa logg på händelser i webbtjänsten med tid och datum för händelsen
 
 Databasstruktur:
+schema: secondsphere
+
+tabeller:
+users
+id (PK) INT
+first_name VARCHAR 20
+last_name VARCHAR 20
+email VARCHAR 50
+updated timestamp CURRENT_TIMESTAMP	ON UPDATE CURRENT_TIMESTAMP
+
+items
+id (PK) INT
+product_name VARCHAR 50
+brand VARCHAR 20
+type VARCHAR 20
+description VARCHAR 100
+size VARCHAR 20
+price INT
+updated timestamp CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+userId (FK) INT
+kvaliteId (FK) INT
+
+conditions
+id (PK) INT
+quality VARCHAR 30
+description VARCHAR 200
+
+kvalité in i items? Egen tabell?
