@@ -19,7 +19,7 @@ include 'partials/header.php';
 // våran apps vyer här
 ?>
 
-<h1>Varor</h1>
+<h2>Varor</h2>
 <?php
     $itemsView->renderAllItemsAsList($itemsModel->getAllItems());
 ?>

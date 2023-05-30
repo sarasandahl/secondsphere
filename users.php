@@ -18,7 +18,7 @@ include 'partials/header.php';
 // våran apps vyer här
 ?>
 
-<h1>Säljare</h1>
+<h2>Säljare</h2>
 <?php
     $usersView->renderAllUsersAsList($usersModel->getAllUsers());
 ?>

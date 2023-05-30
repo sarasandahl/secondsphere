@@ -11,10 +11,17 @@ body {
 }
 
 .header-container {
-    background-color: rgb(42,98,143)
-
+    background-color: rgb(42,98,143);
+    padding: 50px
 }
 
+.first-page-container {
+    padding: 50px;
+}
+
+h1, h2, p, a , button{
+    margin: 30px;
+}
 footer {
     margin-top: 100px;
     margin-bottom: 50px;

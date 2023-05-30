@@ -12,11 +12,11 @@ include 'partials/header.php';
 
 // våran apps vyer här
 ?>
-
-<h1>SecondSphere</h1>
-<p>Ett utplockat sortiment av secondhandkläder</p>
-<p>Vill du sälja hos oss?</p>
-
+<div class="first-page-container">
+    <h2>SecondSphere</h2>
+    <p>Ett utplockat sortiment av secondhandkläder</p>
+    <p>Vill du sälja hos oss?</p>
+</div>
 <?php
 
 
