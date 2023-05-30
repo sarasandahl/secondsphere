@@ -1,3 +1,4 @@
+<!-- statisk, gör ingenting -->
 <footer>
     <div class="footercontainer">
         <h4>Om oss</h4>

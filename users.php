@@ -17,14 +17,18 @@ include 'partials/header.php';
 
 // våran apps vyer här
 ?>
+<div class="user-container">
+    <h2>Säljare</h2>
+    <?php
+        $usersView->renderAllUsersAsList($usersModel->getAllUsers());
+    ?>
+</div>
 
-<h2>Säljare</h2>
+<div class="new-user-container">
+    <p>Vill du sälja hos oss? <br> Skapa en ny användare nedan och börja lägg upp dina varor redan idag!</p>
+
+    <?php include 'partials/user-form.php'; ?>
+</div>
+
 <?php
-    $usersView->renderAllUsersAsList($usersModel->getAllUsers());
-?>
-
-<button>Ny Säljare</button>
-
-<?php
-
 include 'partials/footer.php';
