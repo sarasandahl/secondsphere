@@ -27,7 +27,7 @@ include 'partials/header.php';
 <div class="new-user-container">
     <p>Vill du sälja hos oss? <br> Skapa en ny användare nedan och börja lägg upp dina varor redan idag!</p>
 
-    <?php include 'partials/user-form.php'; ?>
+    <?php include 'classes/views/forms/user-form.php'; ?>
 </div>
 
 <?php
