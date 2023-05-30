@@ -19,12 +19,18 @@ include 'partials/header.php';
 // våran apps vyer här
 ?>
 
-<h2>Varor</h2>
-<?php
-    $itemsView->renderAllItemsAsList($itemsModel->getAllItems());
-?>
-<button>Ny vara</button>
+<div class="items-container">
+    <h2>Varor</h2>
+    <?php
+        $itemsView->renderAllItemsAsList($itemsModel->getAllItems());
+    ?>
+</div>
 
+<div class="new-item-container">
+    <p>Lägg till en vara till försäljning <br> Fyll i fältet nedan och lägg upp varan till försäljning på en gång</p>
+
+    <?php include 'partials/item-form.php'; ?>
+</div>
 <?php
 
 include 'partials/footer.php';

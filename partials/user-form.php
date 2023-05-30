@@ -12,4 +12,4 @@
         <input type="text" name="email" id="email">
     </div>
     <button type="submit">Lägg till Säljare</button>
-    </form>
+</form>

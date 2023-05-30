@@ -23,11 +23,20 @@ h1, h2, p, button {
     margin: 10px;
 }
 
-.user-container {
+.users-container {
     padding: 50px
 }
 
 .new-user-container {
+    border-style: solid;
+    padding: 50px
+}
+
+.items-container {
+    margin: 10px;
+}
+
+.new-item-container {
     border-style: solid;
     padding: 50px
 }
