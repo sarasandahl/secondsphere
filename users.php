@@ -20,7 +20,7 @@ include 'partials/header.php';
 <div class="users-container">
     <h2>Säljare</h2>
     <?php
-        $usersView->renderAllUsersAsList($usersModel->getAllUsers());
+        $usersView->renderAllUsersAsList($usersModel->sortUserAlphabetically());
     ?>
 </div>
 
