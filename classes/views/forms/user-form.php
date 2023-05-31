@@ -1,4 +1,4 @@
-<form>
+<form action="form-handlers/user-form-handler.php" method="post">
     <div>
         <label for="first_name">Förnamn: </label>
         <input type="text" name="first_name" id="first_name">

@@ -2,8 +2,9 @@
 Slutprojekt Systemutveckling PHP
 PHP enligt OOP, HTML output, Enligt MVC, PDO, MySQL-databasm validering och sanering
 
-Beskrivning
-En hemsida för andrahandsförsäljning av secondhandkläder. Vi sköter försäljningen och tar en procentuell avgift av försäljningen.
+Case
+En secondhandbutik NAMN behöver en webbtjänst för att hålla koll på sina plagg och vem som lämnat in dem. Detta är en sådan butik där en person (vi kallar dem säljare) kan lämna in kläder och butiken säljer dem, tar en viss del av försäljningen och en viss del går tillbaka till den som lämnar in kläderna (säljaren).
+
 
 Uppgift
 Vi ska bygga en första prototyp för att illustrera några av de grundläggande funktionerna:

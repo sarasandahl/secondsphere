@@ -6,7 +6,7 @@ require 'classes/models/users-model.php';
 
 $pdo = require 'partials/connect.php';
 
-$db = new DB($pdo);//ska den vara här?
+//$db = new DB($pdo);//ska den vara här?
 $usersModel = new UsersModel($pdo);
 $usersView = new UsersView();
 

@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../db.php';
+
 class ItemsModel extends DB {
 
     protected $table = "items";
