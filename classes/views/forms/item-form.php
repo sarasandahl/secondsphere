@@ -1,8 +1,26 @@
-<form>
+<?php
+require 'classes/models/users-model.php';
+require 'classes/models/conditions-model.php';
+
+$usersModel = new UsersModel(connect($host, $db, $user, $password));
+$conditionsModel = new ConditionsModel(connect($host, $db, $user, $password));
+?>
+
+<form action="form-handlers/item-form-handler.php" method="post">
     <div>
         <label for="user">Säljare:</label>
         <select name="userId" id="user">
             <option value="">--Välj säljare--</option>
+
+            <?php
+            $users = $usersModel->getAllUsers();
+            foreach ($users as $user) {
+                echo "<option value='{$user['id']}'>
+                    {$user['first_name']} {$user['last_name']}
+                </option>";
+            }
+            ?>
+
         </select>
     </div>
     <div>
@@ -33,6 +51,16 @@
         <label for="condition">Vilket skick är varan:</label>
         <select name="conditionId" id="condition">
             <option value="">--Välj skick--</option>
+
+            <?php
+            $conditions = $conditionsModel->getAllConditions();
+            foreach ($conditions as $condition) {
+                echo "<option value='{$condition['id']}'>
+                    {$condition['quality']}
+                </option>";
+            }
+            ?>
+
         </select>
     </div>
     <button type="submit">Lägg till Vara</button>

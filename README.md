@@ -52,3 +52,8 @@ quality VARCHAR 30
 description VARCHAR 200
 
 kvalité in i items? Egen tabell?
+
+
+Relationer:
+Bgränsningnamn - user-item | userId | secondsphere | users | id
+Begränsningsnamn - condition-item | conditionsId | secondsphere | conditions | id

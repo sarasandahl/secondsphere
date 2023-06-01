@@ -5,8 +5,6 @@ require 'classes/db.php';
 require 'classes/models/items-model.php';
 
 $pdo = require 'partials/connect.php';
-
-$db = new DB($pdo); //ska den vara här?
 $itemsModel = new ItemsModel($pdo);
 $singleItemView = new SingleItemView();
 $id = $_GET['post'];

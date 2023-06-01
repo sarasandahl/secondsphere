@@ -6,8 +6,6 @@ require 'classes/db.php';
 require 'classes/models/items-model.php';
 
 $pdo = require 'partials/connect.php';
-
-$db = new DB($pdo);//ska den vara här?
 $itemsModel = new ItemsModel($pdo);
 $itemsView = new ItemsView();
 
@@ -29,7 +27,11 @@ include 'partials/header.php';
 <div class="new-item-container">
     <p>Lägg till en vara till försäljning <br> Fyll i fältet nedan och lägg upp varan till försäljning på en gång</p>
 
-    <?php include 'classes/views/forms/item-form.php'; ?>
+    <?php 
+
+    include 'classes/views/forms/item-form.php'; 
+    
+    ?>
 </div>
 <?php
 

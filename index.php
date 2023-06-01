@@ -1,9 +1,5 @@
 <?php
 
-//require 'classes/db.php';
-
-$pdo = require 'partials/connect.php'; //behöver den vara här?
-
 // ==============================================
 // vy nedan
 
