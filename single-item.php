@@ -14,9 +14,6 @@ $id = $_GET['post'];
 
 include 'partials/header.php';
 
-// våran apps vyer här om book-tabellen!
-$singleItemView->renderSingleItem($itemsModel->getItem($id));
-
-include 'forms/book-review-form.php';
+$singleItemView->renderSingleItem($itemsModel->getOneItemWithUsersAndConditions($id));
 
 include 'partials/footer.php';

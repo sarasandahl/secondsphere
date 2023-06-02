@@ -6,7 +6,8 @@ class ConditionsModel extends DB {
 
     protected $table = "conditions";
 
-    public function getAllConditions() {
+    //hämtar allt i condiditions-tabellen. Används i formuläret för en ny vara(item-form-php)
+    public function getAllConditions() { 
         return $this->getAll($this->table);
     }
 }
