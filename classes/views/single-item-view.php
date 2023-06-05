@@ -1,6 +1,7 @@
 <?php
 
 class SingleItemView {
+
     public function renderSingleItem($item):void {
         echo 
         " 
@@ -17,4 +18,5 @@ class SingleItemView {
             <button type='submit'>KÖP</button>
             </p>";
     }
+    
 }

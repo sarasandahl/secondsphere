@@ -1,6 +1,7 @@
 <?php
 
 class ItemsView {
+
     public function renderAllItemsAsList(array $items):void {
         echo "<ul>";
         foreach($items as $item){
@@ -8,4 +9,5 @@ class ItemsView {
         }
         echo "</ul>";
     }
+    
 }

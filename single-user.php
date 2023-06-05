@@ -22,7 +22,7 @@ $id = $_GET['post'];
 include 'partials/header.php';
 
 // våran apps vyer här om book-tabellen!
-$singleUserView->renderSingleUser($usersModel->getUser($id));
+$singleUserView->renderSingleUser($itemsModel->getUserWithItem($id));
 ?>
 
 <p>Säljarens produkter:<p>

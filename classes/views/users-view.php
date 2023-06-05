@@ -1,6 +1,7 @@
 <?php
 
 class UsersView {
+
     public function renderAllUsersAsList(array $users):void {
         echo "<ul>";
         foreach($users as $user){
@@ -8,4 +9,5 @@ class UsersView {
         }
         echo "</ul>";
     }
+    
 }
