@@ -21,7 +21,7 @@ class ItemsModel extends DB {
     //Används för single-item sidan. visar en vara med mer tillhärande data från tabellerna users och quality. renderas i single-item-view
     public function getOneItemWithUsersAndConditions(int $id) {
         //$query = "SELECT * FROM users JOIN items ON users.id=items.userId JOIN conditions ON conditions.id=items.conditionId";
-        $query = "SELECT items.id, items.product_name, items.brand, items.description, items.size, items.price, conditions.quality, conditions.description, users.first_name, users.last_name FROM users JOIN items ON users.id=items.userId JOIN conditions ON conditions.id=items.conditionId";
+        $query = "SELECT items.id,items.product_name,items.image,items.brand,items.description,items.size,items.price,conditions.quality,conditions.description,users.first_name,users.last_name FROM users JOIN items ON users.id=items.userId JOIN conditions ON conditions.id=items.conditionId";
         $stmt = $this->pdo->prepare($query);
         $stmt->execute();
         $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -34,5 +34,25 @@ class ItemsModel extends DB {
         $query = "INSERT INTO {$this->table} (userId,product_name,brand,type,description,size,price,conditionId) VALUES (?,?,?,?,?,?,?,?)";
         $stmt = $this->pdo->prepare($query);
         $stmt->execute([$userId, $productName, $brand, $type, $description, $size, $price, $conditionId]);
+    }
+
+    //Används för single-user-sidan. visar en vara med mer tillhärande data från tabellerna users och quality. renderas i single-user-view
+    public function getUserWithItem(int $id) {
+        $query = "SELECT users.id,users.first_name,users.last_name,users.email,items.product_name,items.price,items.sold FROM users LEFT JOIN items ON users.id=items.userId";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute();
+        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = array_filter($items, fn($item) => intval($item['id']) == $id);
+        return array_merge(...$result);
+    }
+
+    //FUNKAR INTE
+    public function getItemsFromUser(int $id) {
+        $query = "SELECT users.id,users.first_name,users.last_name,users.email,items.product_name,items.price,items.sold FROM users LEFT JOIN items ON users.id=items.userId";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute();
+        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = array_filter($items, fn($item) => intval($item['id']) == $id);
+        return $result;    
     }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
     <title>SecondSphere</title>
 </head>
-<body>
+<body class="header-images">
 <div class="header-container">
     <h1>SecondSphere</h1>
 

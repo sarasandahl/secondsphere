@@ -11,7 +11,7 @@ class UsersModel extends DB {
         return $this->getAll($this->table);
     }
 
-    //hämtar en user på id, används och renderas i single-user.php
+    //hämtar en user på id, används och renderas i single-user.php BEHÖVER JAG EBNS DENNA NU?
     public function getUser(int $id) { //ta bort?
         $users = $this->getAll($this->table);
         $result = array_filter($users, fn($b) => intval($b['id']) == $id);
@@ -32,5 +32,5 @@ class UsersModel extends DB {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+        
 }

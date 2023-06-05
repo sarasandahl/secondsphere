@@ -5,7 +5,6 @@
 
 include 'partials/header.php';
 
-
 // våran apps vyer här
 ?>
 <div class="first-page-container">
@@ -14,7 +13,5 @@ include 'partials/header.php';
     <p>Vill du sälja hos oss?</p>
 </div>
 <?php
-
-
 
 include 'partials/footer.php';

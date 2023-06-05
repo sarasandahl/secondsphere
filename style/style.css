@@ -1,19 +1,61 @@
-body {
-    background-color: #DAF7A6 ;	
-    font-family: Arial, Helvetica, sans-serif;
-    color: #900C3F;
-}
-
 * {
     margin: 0;
     box-sizing: border-box;
     text-align: center;
 }
 
+body {
+    background-color: white ;	
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+h1 , h2, h3 {
+    margin: 10px;
+    color: hotpink;
+    text-shadow: 1px 1px 2px black;;
+}
+
+h4, p, a, ul, button, form {
+    margin: 10px;
+    color: black;
+}
+
+h1 {
+    font-size: 50px;
+  }
+
+
+a:visited {
+    color: black;
+}  
+
+a:hover {
+    color: hotpink;
+}
+
+img {
+    object-fit: cover;
+    width: 230px;
+    height: 230px;
+}
+
+footer {
+    border-style: solid;
+    margin-top: 100px;
+    bottom: 0;
+    width: 100%;
+    position:absolute;
+}
+
 .header-container {
     border-style: solid;
+    background-image: url("https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=M3wxMj3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80");
     background-color: #FFC300;
-    padding: 50px
+    padding: 50px;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
 }
 
 .first-page-container {
@@ -21,40 +63,23 @@ body {
     padding: 50px;
 }
 
-h1, h2, p, button {
-    margin: 10px;
-}
-
-.users-container {
-    padding: 50px
-}
-
 .new-user-container {
     border-style: solid;
-    padding: 50px
-}
-
-.items-container {
-    margin: 10px;
+    padding: 50px;
 }
 
 .new-item-container {
     border-style: solid;
-    padding: 50px
-}
-
-footer {
-    border-style: solid;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding: 50px;
 }
 
 .footercontainer{
+    background-image: url("https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=M3wxMj3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80");
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 100px;
+    background-size: cover;
+    background-position: bottom;
+    height: 100px;
 }
