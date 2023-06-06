@@ -43,23 +43,17 @@ class ItemsModel extends DB {
         $stmt->execute();
         $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $result = array_filter($items, fn($item) => intval($item['id']) == $id);
-        var_dump($result);
         return array_merge(...$result);
     }
-    //$products = array();
-    //foreach ($result as $r){
-    //    echo $products.array_push($r['product_name']);
-    //    }
-    //var_dump($products);
 
-    //FUNKAR INTE (ska visa ALLA varor för EN användare på single.user-sidan)
+    //visar alla varor hos en säljare på single.user-sidan
     public function getItemsFromUser(int $id) {
-        $query = "SELECT users.id,users.first_name,users.last_name,users.email,items.product_name,items.price,items.sold FROM users LEFT JOIN items ON users.id=items.userId";
+        $query = "SELECT users.id,items.image,items.product_name,items.price,items.sold FROM users LEFT JOIN items ON users.id=items.userId";
         $stmt = $this->pdo->prepare($query);
         $stmt->execute();
         $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $result = array_filter($items, fn($item) => intval($item['id']) == $id);
-        return array_merge_recursive(...$result);
+        return $result; 
     }
 
     //uppdatera vara till såld

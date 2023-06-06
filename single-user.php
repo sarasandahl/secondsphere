@@ -28,7 +28,7 @@ $singleUserView->renderSingleUser($itemsModel->getUserWithItem($id));
 <p>Säljarens produkter:<p>
     
 <?php
-    //FUNKAR INTE
+
 $userItemsView->renderSingleUsersItems($itemsModel->getItemsFromUser($id));
 
 include 'partials/footer.php';

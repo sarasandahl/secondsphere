@@ -1,10 +1,13 @@
 <?php
 
-class UsersItemView {
-    public function renderSingleUsersItems(array $items):void {
+    class UsersItemView {
+        public function renderSingleUsersItems(array $items):void {
+    
+            foreach($items as $item) {
 
-        foreach((array) $items['product_name'] as $items) {
-            echo "<li>{$items}</li>";
+                foreach($item as $key => $value) { 
+                echo $value . "<br>"; 
+            }
         }
-    }
+    }	
 }
