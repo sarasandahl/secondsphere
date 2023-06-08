@@ -26,9 +26,15 @@ $singleUserView->renderSingleUser($itemsModel->getUserWithItem($id));
 ?>
 
 <p>Säljarens produkter:<p>
+
+<div class="user-products-container">
     
 <?php
 
 $userItemsView->renderSingleUsersItems($itemsModel->getItemsFromUser($id));
+?>
+
+</div>
+<?php
 
 include 'partials/footer.php';

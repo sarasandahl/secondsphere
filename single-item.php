@@ -16,4 +16,6 @@ include 'partials/header.php';
 
 $singleItemView->renderSingleItem($itemsModel->getOneItemWithUsersAndConditions($id));
 
+include 'classes/views/forms/buy-button.php';
+
 include 'partials/footer.php';

@@ -58,11 +58,15 @@ class ItemsModel extends DB {
 
     //uppdatera vara till såld
     function uptadeItemToSold($sold) {
-        $query = "UPDATE items SET sold = TRUE WHERE sold = FALSE";
+        $query = "UPDATE items SET sold = TRUE WHERE sold = FALSE AND (id) = (?)";
         $stmt = $this->pdo->prepare($query);
-        $update->bind_param('si', $value, $id);
-        $update->execute($sold);
+        $update->bind_param('i', $sold);
+        $update->execute($sold);	
         return $update->affected_rows;
+        if(0) {
+            echo 'Finns i lager';
+        } else {
+            echo 'Såld';}
     }
 }
 

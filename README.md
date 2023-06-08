@@ -7,21 +7,21 @@ En secondhandbutik NAMN behöver en webbtjänst för att hålla koll på sina pl
 
 Uppgift
 Vi ska bygga en första prototyp för att illustrera några av de grundläggande funktionerna:
-1. Lista säljare alfabetiskt
-2. Lista plagg
-3. Lägg till plagg
-4. Lägg till säljare (den som lämnade in plagget)
-5. Markera ett plagg som sålt
+1. Lista säljare alfabetiskt CHECK
+2. Lista plagg CHECK
+3. Lägg till plagg CHECK
+4. Lägg till säljare (den som lämnade in plagget) CHECK
+5. Markera ett plagg som sålt 
 6. Visa information om säljaren:
-- antal inlämnade plagg
+- antal inlämnade plagg 
 - antal sålda plagg
 - totala försäljningssumman
-- alla plagg som säljaren lämnat in
+- alla plagg som säljaren lämnat in CHECK
 Denna webbtjänst ska vidareutvecklas så vi behöver tänka skalbart och designa en databas som kan hantera ytterligare funktioner i framtiden.
 
 Framtida funktioner
-1. I listan med plagg se hur många dagar som plagget varit inlämnat
-2. Visa logg på händelser i webbtjänsten med tid och datum för händelsen
+1. I listan med plagg se hur många dagar som plagget varit inlämnat CHECK
+2. Visa logg på händelser i webbtjänsten med tid och datum för händelsen CHECK
 
 Databasstruktur:
 schema: secondsphere
@@ -64,3 +64,18 @@ Bild url:er:
 Jeans på galge: https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFudHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60
 väska: https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGFuZGJhZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60
 Flera Jeans på galge: https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhbnRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60
+
+
+
+Säljarens produkter: Antal plagg 6  Antal sålda plagg: 4
+Total sålt för: 4300:- Intjänat 2100:-
+
+Status: Finns i lager
+Status: Såld
+när man trycker på puten måste den ha ett id
+
+
+A prepared statement is a feature used to execute the same (or similar) SQL statements repeatedly with high efficiency = det jag gör i models
+
+        if ($items['items.id'] == NULL)
+            echo "Finns inga varor till försäljning"; 

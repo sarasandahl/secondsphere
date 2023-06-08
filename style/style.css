@@ -40,14 +40,6 @@ img {
     height: 230px;
 }
 
-footer {
-    border-style: solid;
-    margin-top: 100px;
-    bottom: 0;
-    width: 100%;
-    position:absolute;
-}
-
 .header-container {
     border-style: solid;
     background-image: url("https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=M3wxMj3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80");
@@ -73,6 +65,13 @@ footer {
     padding: 50px;
 }
 
+.user-products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    gap: 100px;
+}
+
 .footercontainer{
     background-image: url("https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=M3wxMj3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80");
     display: flex;
@@ -80,6 +79,10 @@ footer {
     justify-content: center;
     gap: 100px;
     background-size: cover;
-    background-position: bottom;
     height: 100px;
+    border-style: solid;
+    margin-top: 100px;
+    bottom: 0;
+    width: 100%;
+    background-position: bottom;
 }
