@@ -1,5 +1,6 @@
 <?php
 
+//Kör igenom och skriver ut varor på en säljare och en hämtat på id:et. Kör en each för att fånga upp om det ej finns varor. Är det snyggt att köra på product_name? Finns ej user.id för då hittar den ej användar:idet
 class UsersItemView {
     public function renderSingleUsersItems(array $items):void {
             //om vara finns gör det här...
@@ -17,8 +18,8 @@ class UsersItemView {
                     echo 'Såld';
                 };?></p>
             </div>
-            <?php } else { //om varas inte finns visa ingenting alt: "Den här säljaren har inga varor"
-                echo "Finns inga varor till försäljning"; 
+            <?php } else { 
+                echo "Denna säljare har inte lagt upp några varor till försäljning"; 
             }   
         }
     }

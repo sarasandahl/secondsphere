@@ -1,11 +1,12 @@
 <?php
-
+//øska den här vara en form-handler?
 require '../classes/models/items-model.php';
 $itemModel = new ItemsModel(require '../partials/connect.php');
+// $id = $_GET['post'];
 
-if (isset($PUT['sold'])) {
-    $sold = filter_var($PUT['sold'], FILTER_SANITIZE_NUMBER_INT);
-    $itemModel->uptadeItemToSold($sold);
+if (isset($_POST['sold'])) {
+    // skicka in ett $id här'
+    $itemModel->uptadeItemToSold();
 }
 
 header("Location: ../items.php");

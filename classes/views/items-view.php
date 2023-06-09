@@ -1,13 +1,15 @@
 <?php
 
+//renderar listan av varor med den informationen jag vill ha ut
 class ItemsView {
-
-    public function renderAllItemsAsList(array $items):void {
-        echo "<ul>";
-        foreach($items as $item){
-            echo "<a href='single-item.php?post=".$item['id']."'><li>{$item['product_name']}, {$item['brand']} {$item['type']}</li></a>";
-        }
-        echo "</ul>";
-    }
     
+    public function renderAllItemsAsList(array $items):void {
+        foreach($items as $item){
+            echo 
+            "<a href='single-item.php?post=".$item['id']."'><br> 
+            {$item['product_name']}<br> <img src=".$item['image']." alt='image' height='600px'><br> 
+            {$item['brand']}<br> 
+            {$item['type']}</a>";
+        }
+    }
 }

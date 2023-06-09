@@ -11,11 +11,11 @@ Vi ska bygga en första prototyp för att illustrera några av de grundläggande
 2. Lista plagg CHECK
 3. Lägg till plagg CHECK
 4. Lägg till säljare (den som lämnade in plagget) CHECK
-5. Markera ett plagg som sålt 
+5. Markera ett plagg som sålt CHECK
 6. Visa information om säljaren:
 - antal inlämnade plagg 
-- antal sålda plagg
-- totala försäljningssumman
+- antal sålda plagg CHECK
+- totala försäljningssumman CHECK
 - alla plagg som säljaren lämnat in CHECK
 Denna webbtjänst ska vidareutvecklas så vi behöver tänka skalbart och designa en databas som kan hantera ytterligare funktioner i framtiden.
 
@@ -75,7 +75,8 @@ Status: Såld
 när man trycker på puten måste den ha ett id
 
 
-A prepared statement is a feature used to execute the same (or similar) SQL statements repeatedly with high efficiency = det jag gör i models
-
         if ($items['items.id'] == NULL)
             echo "Finns inga varor till försäljning"; 
+
+
+        UPDATE `items` SET `sold`=TRUE WHERE `id`=2;

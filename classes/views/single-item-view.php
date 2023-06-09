@@ -1,11 +1,12 @@
 <?php
 
+//renderar en bild genom länken och skriver ut den information jag vill åt med tillhörande information om säljare samt varans kvalité
 class SingleItemView {
 
     public function renderSingleItem($item):void {
         echo "<p> 
+            <img src='{$item['image']}' alt='image' style='float:left;height='600px; ><br>
             {$item['product_name']}<br>
-            <img src='{$item['image']}' alt='image' height='600px'><br>
             Märke: {$item['brand']},<br>
             Beskrivning: {$item['description']},<br>
             Storlek: {$item['size']},<br>

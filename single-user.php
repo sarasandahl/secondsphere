@@ -21,20 +21,25 @@ $id = $_GET['post'];
 
 include 'partials/header.php';
 
-// våran apps vyer här om book-tabellen!
-$singleUserView->renderSingleUser($itemsModel->getUserWithItem($id));
+// våran apps vyer här!
+
 ?>
 
-<p>Säljarens produkter:<p>
+<div class="single-user-container"> 
+    <div class="user-information">   
+        <?php $singleUserView->renderSingleUser($itemsModel->getUserWithItem($id)); ?>
+    </div>
 
-<div class="user-products-container">
-    
-<?php
-
-$userItemsView->renderSingleUsersItems($itemsModel->getItemsFromUser($id));
-?>
-
+    <div class="user-statistics">   
+        <?php $singleUserView->renderUserStats($itemsModel->getItemsFromUser($id)); ?>
+    </div>
 </div>
+
+<h3>Säljarens produkter:</h3>
+<div class="user-products-container">   
+    <?php $userItemsView->renderSingleUsersItems($itemsModel->getItemsFromUser($id)); ?>
+</div>
+
 <?php
 
 include 'partials/footer.php';
