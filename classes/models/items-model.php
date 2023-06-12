@@ -30,10 +30,10 @@ class ItemsModel extends DB {
     }
     
     //Lägger till en vara med säljare från users-tabell och skick från conditions-tabell. Används i item-form-handler.php
-    public function addItem(int $userId, string $productName, string $brand, string $type, string $description, string $size, int $price, int $conditionId) {
-        $query = "INSERT INTO {$this->table} (userId,product_name,brand,type,description,size,price,conditionId) VALUES (?,?,?,?,?,?,?,?)";
+    public function addItem(int $userId, string $productName, string $brand, string $type, string $description, string $size, int $price, int $conditionId, string $image) {
+        $query = "INSERT INTO {$this->table} (userId,product_name,brand,type,description,size,price,conditionId,image) VALUES (?,?,?,?,?,?,?,?,?)";
         $stmt = $this->pdo->prepare($query);
-        $stmt->execute([$userId, $productName, $brand, $type, $description, $size, $price, $conditionId]);
+        $stmt->execute([$userId, $productName, $brand, $type, $description, $size, $price, $conditionId, $image]);
     }
 
     //Används för single-user-sidan. visar en vara med mer tillhärande data från tabellerna users och quality. renderas i single-user-view

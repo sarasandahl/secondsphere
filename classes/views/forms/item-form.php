@@ -67,5 +67,9 @@ $conditionsModel = new ConditionsModel(connect($host, $db, $user, $password));
 
         </select>
     </div>
+    <div> <!-- https://talkerscode.com/webtricks/upload-image-from-url-using-php.php -->
+        <label for="image">Bild: </label>
+        <input type="text" name="image" placeholder="Skriv in bild-URL">
+    </div>
     <button type="submit">Lägg till Vara</button>
 </form>
