@@ -12,7 +12,7 @@ class UsersModel extends DB {
     }
 
     //hämtar en user på id, används och renderas i single-user.php BEHÖVER JAG EBNS DENNA NU?
-    public function getUser(int $id) { //ta bort?
+    public function getUser(int $id) { //ta bort?  :array?
         $users = $this->getAll($this->table);
         $result = array_filter($users, fn($b) => intval($b['id']) == $id);
         return array_merge(...$result);

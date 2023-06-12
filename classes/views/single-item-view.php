@@ -11,7 +11,7 @@ class SingleItemView {
             Beskrivning: {$item['description']}<br>
             Storlek: {$item['size']}<br>
             Pris: {$item['price']} kr<br>
-            Skick: <a href='' title='{$item['description']}'> {$item['quality']} </a><br>
+            Skick: <a href='' title='{$item['meaning']}'> {$item['quality']} </a><br>
             Säljare: {$item['first_name']} {$item['last_name']}<br>
             </p>";
     }

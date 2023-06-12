@@ -21,7 +21,7 @@ class ItemsModel extends DB {
     //Används för single-item sidan. visar en vara med mer tillhärande data från tabellerna users och quality. renderas i single-item-view
     public function getOneItemWithUsersAndConditions(int $id) {
         //$query = "SELECT * FROM users JOIN items ON users.id=items.userId JOIN conditions ON conditions.id=items.conditionId";
-        $query = "SELECT items.id,items.product_name,items.image,items.brand,items.description,items.size,items.price,conditions.quality,conditions.description,users.first_name,users.last_name FROM users JOIN items ON users.id=items.userId JOIN conditions ON conditions.id=items.conditionId";
+        $query = "SELECT items.id,items.product_name,items.image,items.brand,items.description,items.size,items.price,conditions.quality,conditions.meaning,users.first_name,users.last_name FROM users JOIN items ON users.id=items.userId JOIN conditions ON conditions.id=items.conditionId";
         $stmt = $this->pdo->prepare($query);
         $stmt->execute();
         $items = $stmt->fetchAll(PDO::FETCH_ASSOC);

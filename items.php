@@ -18,18 +18,14 @@ include 'partials/header.php';
 <h2>Varor</h2>
 
 <div class="items-container">
-
     <?php $itemsView->renderAllItemsAsList($itemsModel->getAllItems());?>
-
 </div>
 
 <div class="new-item-container">
-
     <p>Lägg till en vara till försäljning <br> 
     Fyll i fältet nedan och lägg upp varan till försäljning på en gång</p>
 
     <?php include 'classes/views/forms/item-form.php'; ?>
-
 </div>
 
 <?php include 'partials/footer.php';
