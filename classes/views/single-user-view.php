@@ -11,8 +11,8 @@ class SingleUserView {
         </p>";
     }
 
-    //funktionen tar statistik kring säljarens varor efter en ihopkoppling av tabellerna. Ska denna ligga i egen view?
-    public function renderUserStats(array $items):void {
+    //funktionen tar statistik kring säljarens varor efter en ihopkoppling av tabellerna. Ska denna ligga i egen view? 
+    public function renderUserStats(array $items):void { //fixa så att om en människa inte har varor ingen statistik
         
         $amountOfItems = count($items); //räknar antalet produkter totalt
 
@@ -26,14 +26,23 @@ class SingleUserView {
 
         $earnedAmount = $total * 0.7; //drar av 30% på totala beloppet, vilket är företagets "arvode"
 
-        ?>
+        // https://stackoverflow.com/questions/1921421/get-the-first-element-of-an-array
+        $first = array_slice($items, 0, 1);  
+        $item = $first[0];
+        $product = $item['product_name']; 
 
-        <div>
-        <p>Antal inlämnade plagg: <?= $amountOfItems; ?> stycken</p>
-        <p>Antal sålda plagg: <?= count($sold); ?> stycken</p> 
-        <p>Sålt för totalt: <?= $total; ?> kr</p>
-        <p>Totalt intjänat belopp: <?=  $earnedAmount; ?>kr</p>
-        </div>
+        if ($product != NULL) { 
+            ?>
+            <div>
+                <p>Antal inlämnade plagg: <?= $amountOfItems; ?> stycken</p>
+                <p>Antal sålda plagg: <?= count($sold); ?> stycken</p> 
+                <p>Sålt för totalt: <?= $total; ?> kr</p>
+                <p>Totalt intjänat belopp: <?=  $earnedAmount; ?>kr</p>
+            </div>
         <?php
+        } else { 
+            echo "Det finns ingen försäljningsstatestik för denna säljare"; 
+        }
     }
 }
+

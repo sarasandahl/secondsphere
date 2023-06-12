@@ -17,7 +17,6 @@ $userItemsView = new UsersItemView();
 $id = $_GET['post'];
 
 // ==============================================
-// Skapa vy nedan
 
 include 'partials/header.php';
 
@@ -25,12 +24,16 @@ include 'partials/header.php';
 
 ?>
 
+<h3>Information:</h3>
+
 <div class="single-user-container"> 
     <div class="user-information">   
         <?php $singleUserView->renderSingleUser($itemsModel->getUserWithItem($id)); ?>
     </div>
 
     <div class="user-statistics">   
+    <h4>Statistik:</h4>
+
         <?php $singleUserView->renderUserStats($itemsModel->getItemsFromUser($id)); ?>
     </div>
 </div>

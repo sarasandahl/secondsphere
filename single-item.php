@@ -17,10 +17,14 @@ include 'partials/header.php';
 
 <div class="single-item-container">
     <?php $singleItemView->renderSingleItem($itemsModel->getOneItemWithUsersAndConditions($id)); ?>
-</div>
 
 <?php
 
 include 'classes/views/forms/buy-button.php';
+?>
+
+</div>
+
+<?php
 
 include 'partials/footer.php';

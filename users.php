@@ -9,7 +9,6 @@ $usersModel = new UsersModel($pdo);
 $usersView = new UsersView();
 
 // ==============================================
-// vy nedan
 
 include 'partials/header.php';
 

@@ -1,6 +1,5 @@
 <?php
 
-
 require 'classes/views/items-view.php';
 require 'classes/db.php';
 require 'classes/models/items-model.php';
@@ -10,7 +9,6 @@ $itemsModel = new ItemsModel($pdo);
 $itemsView = new ItemsView();
 
 // ==============================================
-// vy nedan
 
 include 'partials/header.php';
 

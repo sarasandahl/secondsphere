@@ -1,7 +1,6 @@
 <?php
 
 // ==============================================
-// vy nedan
 
 include 'partials/header.php';
 

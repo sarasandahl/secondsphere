@@ -2,8 +2,9 @@
 
 //renderar listan av varor med den informationen jag vill ha ut
 class ItemsView {
-    
+
     public function renderAllItemsAsList(array $items):void {
+       // echo "<ul>";
         foreach($items as $item){
             echo 
             "<a href='single-item.php?post=".$item['id']."'><br> 
@@ -11,5 +12,6 @@ class ItemsView {
             {$item['brand']}<br> 
             {$item['type']}</a>";
         }
+       // echo "</ul>";
     }
 }

@@ -23,6 +23,10 @@ $conditionsModel = new ConditionsModel(connect($host, $db, $user, $password));
 
         </select>
     </div>
+    <!-- <div>
+        <input type="file" name="image" id="images">
+        <input type="submit" value="Upload Image" name="submit">  
+    </div> -->
     <div>
         <label for="product_name">Rubrik: </label>
         <input type="text" name="product_name" id="product_name">

@@ -80,3 +80,5 @@ när man trycker på puten måste den ha ett id
 
 
         UPDATE `items` SET `sold`=TRUE WHERE `id`=2;
+
+
