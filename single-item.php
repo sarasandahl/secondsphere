@@ -20,6 +20,7 @@ include 'partials/header.php';
 
 <?php
 
+//knapp för att köpa kopplat till sidans modell
 include 'classes/views/forms/buy-button.php';
 ?>
 

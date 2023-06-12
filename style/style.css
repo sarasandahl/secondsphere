@@ -60,11 +60,11 @@ img {
 
 .items-container {
     display: flex;
-    
-    flex-wrap: wrap;
     justify-content: center;   
+    flex-wrap: wrap;
     gap: 100px;
 }
+
 
 .new-item-container {
     padding: 50px;

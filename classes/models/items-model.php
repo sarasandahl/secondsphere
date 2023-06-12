@@ -64,5 +64,3 @@ class ItemsModel extends DB {
         return $stmt->affected_rows;
     }
 }
-
-

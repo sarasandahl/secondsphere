@@ -4,14 +4,15 @@
 class ItemsView {
 
     public function renderAllItemsAsList(array $items):void {
-       // echo "<ul>";
-        foreach($items as $item){
-            echo 
-            "<a href='single-item.php?post=".$item['id']."'><br> 
-            {$item['product_name']}<br> <img src=".$item['image']." alt='image' height='600px'><br> 
-            {$item['brand']}<br> 
-            {$item['type']}</a>";
+
+            foreach($items as $item){
+                if ($item['sold'] == 0) {
+                    echo 
+                    "<a href='single-item.php?post=".$item['id']."'><br> 
+                    {$item['product_name']}<br> <img src=".$item['image']." alt='image' height='600px'><br> 
+                    {$item['brand']}<br> 
+                    {$item['type']}</a>";
+            }
         }
-       // echo "</ul>";
     }
 }
