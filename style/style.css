@@ -65,6 +65,11 @@ img {
     gap: 100px;
 }
 
+.form-container {
+    display: flex;
+    justify-content: center;   
+    flex-direction: row;
+}
 
 .new-item-container {
     padding: 50px;

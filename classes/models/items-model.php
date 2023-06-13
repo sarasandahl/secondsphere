@@ -1,5 +1,4 @@
 <?php
-use CommonMark\Node\Item;
 
 require_once __DIR__ . '/../db.php';
 
@@ -57,14 +56,26 @@ class ItemsModel extends DB {
         return $result; 
     }
 
-    //uppdatera vara till såld
-    function uptadeItemToSold() {
+    //Uppdatera vara till såld genom formulär och scroll
 
-       // något sånt? och passa in sold //// $sold = $item('sold');
-
-        $query = "UPDATE items SET sold = 1 WHERE id = 3";//hårdkodad
+    function uptadeItemToSold(int $id) {
+        $query = "UPDATE items SET sold = 1 WHERE id = ?";
+        $sold = 1;
         $stmt = $this->pdo->prepare($query);
-        $stmt->execute(); //prepare?
-        return $stmt->affected_rows;
+        $stmt->execute([$id]);
     }
+
+
+    //uppdatera vara till såld
+    //function uptadeItemToSold(int $id) {
+       // något sånt? och passa in sold //// $sold = $item('sold');
+        //$query = "UPDATE items SET sold = 1 WHERE id = ?";
+        //$query = "UPDATE items SET sold = 1 WHERE id = 3";//hårdkodad
+        //$sold = 1;
+        //$stmt = $this->pdo->prepare($query);
+        //$stmt->bind_param("ii", $sold, $id);
+        //$stmt->execute(); //prepare?
+        //return $stmt->affected_rows;
+        //$stmt->bind_param("ii", $sold, $id);??
+    //}
 }

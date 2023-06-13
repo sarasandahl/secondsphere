@@ -21,6 +21,9 @@ include 'partials/header.php';
     <?php $itemsView->renderAllItemsAsList($itemsModel->getAllItems());?>
 </div>
 
+
+<div class="form-container">
+
 <div class="new-item-container">
     <p>Lägg till en vara till försäljning <br> 
     Fyll i fältet nedan och lägg upp varan till försäljning på en gång</p>
@@ -28,4 +31,11 @@ include 'partials/header.php';
     <?php include 'classes/views/forms/item-form.php'; ?>
 </div>
 
-<?php include 'partials/footer.php';
+<div class="buy-item">
+    <p>Köp en vara<br> 
+    <?php include 'classes/views/forms/buy-button-form.php'; ?>
+</div>
+</div>
+<?php 
+
+include 'partials/footer.php';

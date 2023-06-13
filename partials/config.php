@@ -2,5 +2,5 @@
 
 $host = "localhost";
 $db = "secondsphere";
-$user  = "secondsphere";
+$user = "secondsphere";
 $password = "abc123";
