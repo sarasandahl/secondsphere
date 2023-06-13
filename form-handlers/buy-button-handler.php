@@ -1,5 +1,5 @@
 <?php
-//øska den här vara en form-handler?
+//ska den här vara en form-handler?
 require '../classes/models/items-model.php';
 $itemModel = new ItemsModel(require '../partials/connect.php');
 // $id = $_GET['post'];
