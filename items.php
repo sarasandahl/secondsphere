@@ -12,7 +12,8 @@ $itemsView = new ItemsView();
 
 include 'partials/header.php';
 
-// våran apps vyer här
+// Vy
+
 ?>
 
 <h2>Varor</h2>

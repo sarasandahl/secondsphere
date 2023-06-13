@@ -10,18 +10,22 @@ $singleItemView = new SingleItemView();
 $id = $_GET['post'];
 
 // ==============================================
-// Skapa vy nedan
 
 include 'partials/header.php';
+
+// Vy
+
 ?>
 
 <div class="single-item-container">
+
     <?php $singleItemView->renderSingleItem($itemsModel->getOneItemWithUsersAndConditions($id)); ?>
 
 <?php
 
 //knapp för att köpa kopplat till sidans modell
 include 'classes/views/forms/buy-button.php';
+
 ?>
 
 </div>

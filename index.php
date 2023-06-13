@@ -4,7 +4,8 @@
 
 include 'partials/header.php';
 
-// våran apps vyer här
+// Vy
+
 ?>
 <div class="first-page-container">
     <h2>SecondSphere</h2>
