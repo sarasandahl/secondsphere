@@ -11,13 +11,6 @@ class UsersModel extends DB {
         return $this->getAll($this->table);
     }
 
-    //hämtar en user på id, används och renderas i single-user.php BEHÖVER JAG EBNS DENNA NU?
-    public function getUser(int $id) { //ta bort?  :array?
-        $users = $this->getAll($this->table);
-        $result = array_filter($users, fn($b) => intval($b['id']) == $id);
-        return array_merge(...$result);
-    }
-    
     //lägg till en user i formulär, används till formuläret för ny säljare i user-form-handler
     public function addUser(string $firstName, string $lastName, string $email) {
         $query = "INSERT INTO {$this->table} (first_name,last_name,email) VALUES (?,?,?)";

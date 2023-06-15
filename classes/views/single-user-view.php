@@ -3,7 +3,7 @@
 //renderar delar av sidan på enskild säljare. Med information om säljare samt information om statistiken kring säljarens varor
 class SingleUserView {
 
-    //funktionen rendera säljarens kontaktuppgifter från users-tabellen
+    //funktionen renderar säljarens kontaktuppgifter från users-tabellen
     public function renderSingleUser($user):void {
 
         echo "<p> Säljare: {$user['first_name']} {$user['last_name']}<br>
@@ -11,8 +11,8 @@ class SingleUserView {
         </p>";
     }
 
-    //funktionen tar statistik kring säljarens varor efter en ihopkoppling av tabellerna. Ska denna ligga i egen view? 
-    public function renderUserStats(array $items):void { //fixa så att om en människa inte har varor ingen statistik
+    //funktionen tar statistik kring säljarens varor efter en ihopkoppling av tabellerna. Ligga i egen instans?
+    public function renderUserStats(array $items):void {
         
         $amountOfItems = count($items); //räknar antalet produkter totalt
 
@@ -20,7 +20,7 @@ class SingleUserView {
 
         $total = 0; //säger att totalen för summan ska börja räkna på 0
 
-        foreach($sold as $item) { //loopar igenom listan på tabellen priser(price) och slår ihop det med $total för att fåp ut totalen
+        foreach($sold as $item) { //loopar igenom listan på tabellen priser(price) och slår ihop det med $total för att få ut totalen
             $total += $item['price'];
         }
 

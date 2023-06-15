@@ -10,13 +10,6 @@ class ItemsModel extends DB {
     public function getAllItems() {
         return $this->getAll($this->table);
     }
-    
-    //ta bort? Gör den här något ens nu? Undersök.
-    public function getItem(int $id) {
-        $items = $this->getAll($this->table);
-        $result = array_filter($items, fn($item) => intval($item['id']) == $id);
-        return array_merge(...$result);
-    }
 
     //Används för single-item sidan. visar en vara med mer tillhärande data från tabellerna users och quality. renderas i single-item-view
     public function getOneItemWithUsersAndConditions(int $id) {

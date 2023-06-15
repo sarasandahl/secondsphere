@@ -1,9 +1,9 @@
 <?php
 
-$itemsModel = new ItemsModel(connect($host, $db, 'secondsphere', $password)); // vet inte varför $user
+$itemsModel = new ItemsModel(connect($host, $db, 'secondsphere', $password)); // vet inte varför $user inte fungerar?
 
 ?>
-
+<!-- Formulär för att köpa en vara med post, genom scrolldown på alla varor som INTE är sålda. Action så att buy-button-form-handler.php utförs --> 
 <form action="form-handlers/buy-button-form-handler.php" method="post">
     <div>
         <label for="item">Välj vara:</label>

@@ -13,7 +13,7 @@ $id = $_GET['post'];
 
 include 'partials/header.php';
 
-// Vy
+// Vy för sidan med en vara
 
 ?>
 
@@ -22,9 +22,6 @@ include 'partials/header.php';
     <?php $singleItemView->renderSingleItem($itemsModel->getOneItemWithUsersAndConditions($id)); ?>
 
 <?php
-
-//knapp för att köpa kopplat till sidans modell
-include 'classes/views/forms/buy-button.php';
 
 ?>
 

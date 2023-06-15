@@ -1,9 +1,9 @@
 <?php
 
-//Kör igenom och skriver ut varor på en säljare och en hämtat på id:et. Kör en each för att fånga upp om det ej finns varor. Är det snyggt att köra på product_name? Finns ej user.id för då hittar den ej användar:idet
+//Kör igenom och skriver ut varor på en säljare hämtat på id:et. Kör en each för att fånga upp om det ej finns varor. Är det snyggt att köra på product_name? Finns ej user.id för då hittar den ej användar:idet
 class UsersItemView {
     public function renderSingleUsersItems(array $items):void {
-            //om vara finns gör det här...
+
         foreach($items as $item) {
             if ($item["product_name"] != NULL) { 
             ?>

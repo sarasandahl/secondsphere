@@ -1,3 +1,4 @@
+<!-- Formulär för att skapa en ny användare med post, action till user-form-handler.php --> 
 <form action="form-handlers/user-form-handler.php" method="post">
     <div>
         <label for="first_name">Förnamn: </label>

@@ -1,6 +1,6 @@
 <?php
 
-//renderar alla användare i en lista genom loop.
+//renderar alla användare i en lista genom loop
 class UsersView {
 
     public function renderAllUsersAsList(array $users):void {

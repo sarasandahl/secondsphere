@@ -1,3 +1,4 @@
+<!-- Appens header, existerar på varje endpoint med naven inkluderad -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

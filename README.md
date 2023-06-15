@@ -61,12 +61,9 @@ Begränsningsnamn - condition-item | conditionsId | secondsphere | conditions | 
 
 
 Bild url:er:
-Jeans på galge: 
-https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFudHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60
-
-väska: 
+väska (används för att lägga upp på alla bilder): 
 https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGFuZGJhZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60
 
-Flera Jeans på galge: 
+Flera Jeans på galge (används som bakgrund i header och footer): 
 https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhbnRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60
 

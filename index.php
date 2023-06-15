@@ -1,10 +1,8 @@
 <?php
 
-// ==============================================
-
 include 'partials/header.php';
 
-// Vy
+// Vy för första sidan. går ej att integrera med annat än sidorna i nav genom inkluderad headern
 
 ?>
 <div class="first-page-container">

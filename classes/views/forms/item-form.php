@@ -2,10 +2,11 @@
 require 'classes/models/users-model.php';
 require 'classes/models/conditions-model.php';
 
+//Får tillgångar till usersmodel och conditionsmodel
 $usersModel = new UsersModel(connect($host, $db, $user, $password));
 $conditionsModel = new ConditionsModel(connect($host, $db, $user, $password));
 ?>
-
+<!-- Formulär för att skapa en vara med post, väljer försäljare och condition åt varan. Action så att item-form-handler.php utförs --> 
 <form action="form-handlers/item-form-handler.php" method="post">
     <div>
         <label for="user">Säljare:</label>
@@ -23,10 +24,6 @@ $conditionsModel = new ConditionsModel(connect($host, $db, $user, $password));
 
         </select>
     </div>
-    <!-- <div>
-        <input type="file" name="image" id="images">
-        <input type="submit" value="Upload Image" name="submit">  
-    </div> -->
     <div>
         <label for="product_name">Rubrik: </label>
         <input type="text" name="product_name" id="product_name">

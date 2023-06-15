@@ -1,6 +1,6 @@
 <?php
 
-//renderar en bild genom länken och skriver ut den information jag vill åt med tillhörande information om säljare samt varans kvalité
+//renderar en vara genom get i roten. Skriver ut den information jag vill åt med tillhörande information om säljare samt varans kvalité med infotext via hover-effekt
 class SingleItemView {
 
     public function renderSingleItem($item):void {

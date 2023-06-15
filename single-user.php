@@ -20,7 +20,7 @@ $id = $_GET['post'];
 
 include 'partials/header.php';
 
-// Vy
+// Vy för en säljare med tre delar; information kring säljare, statistik för säljarens varu-försäljning och lista med alla säljarens varor (sålda och icke sålda) 
 
 ?>
 
