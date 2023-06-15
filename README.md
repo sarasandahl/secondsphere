@@ -1,7 +1,10 @@
 # secondsphere
 Slutprojekt Systemutveckling PHP
+
 Detta projekt är skapat i PHP med html-output, där jag har använt MyPhpAdmin som gränssnitt för att jobba mot min databas i mysql. 
 Projektet är strukturerat med model-view-controler(MVC) där filerna i roten utgör controllers. Jag försöker jobba objek-orienterat(enligt OOP) med klasser och arv. Projektet inkluderar validering och sanering i input-fält från användaren samt typräkring i koden. 
+
+----------------------------------------------------------------------
 
 Case:
 En secondhandbutik NAMN behöver en webbtjänst för att hålla koll på sina plagg och vem som lämnat in dem. Detta är en sådan butik där en person (vi kallar dem säljare) kan lämna in kläder och butiken säljer dem, tar en viss del av försäljningen och en viss del går tillbaka till den som lämnar in kläderna (säljaren).
@@ -24,6 +27,8 @@ Framtida funktioner;
 1. I listan med plagg se hur många dagar som plagget varit inlämnat CHECK
 2. Visa logg på händelser i webbtjänsten med tid och datum för händelsen CHECK
 
+----------------------------------------------------------------------
+
 Databasstruktur:
 
 ![Bild på databas-struktur](schema-struktur.png)
@@ -32,6 +37,7 @@ Relationer:
 - Bgränsningnamn - user-item | userId | secondsphere | users | id
 - Begränsningsnamn - condition-item | conditionsId | secondsphere | conditions | id
 
+----------------------------------------------------------------------
 
 Bild url:er som används i koden:
 - väska (används för att lägga upp på alla bilder): 
