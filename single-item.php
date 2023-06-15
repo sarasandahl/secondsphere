@@ -18,7 +18,7 @@ include 'partials/header.php';
 ?>
 
 <div class="single-item-container">
-
+<!-- Kör funktionen renderSingleItem från SingleItemView, tar in prepared statement/funktionen getOneItemWithUsersAndConditions från items-model.php som argument. De "knyts ihop" -->
     <?php $singleItemView->renderSingleItem($itemsModel->getOneItemWithUsersAndConditions($id)); ?>
 
 <?php

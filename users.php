@@ -17,7 +17,7 @@ include 'partials/header.php';
 
 <div class="users-container">
     <h2>Säljare</h2>
-     
+    <!-- Kör funktionen renderAllUsersAsList från UsersView, tar in prepared statement/funktionen sortUserAlphabetically från users-model.php som argument. De "knyts ihop" -->
     <?php $usersView->renderAllUsersAsList($usersModel->sortUserAlphabetically());?>
 
 </div>

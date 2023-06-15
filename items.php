@@ -19,7 +19,8 @@ include 'partials/header.php';
 <h2>Varor</h2>
 
 <div class="items-container">
-    <?php $itemsView->renderAllItemsAsList($itemsModel->getAllItems());?> <!-- Kör funktionen renderAllItemsAsList från items-view.php, tar in funktionen getAllItems från items-model.php som argument. De "knyts ihop" -->
+<!-- Kör funktionen renderAllItemsAsList från items-view.php, tar in prepared statement/funktionen getAllItems från items-model.php som argument. De "knyts ihop" -->
+    <?php $itemsView->renderAllItemsAsList($itemsModel->getAllItems());?> 
 </div>
 
 

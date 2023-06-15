@@ -28,14 +28,14 @@ include 'partials/header.php';
 
 <div class="single-user-container"> 
     <div class="user-information">   
-
+<!-- Kör funktionen renderSingleUser från singleUserView, tar in prepared statement/funktionen getUserWithItem från items-model.php som argument. De "knyts ihop" -->
         <?php $singleUserView->renderSingleUser($itemsModel->getUserWithItem($id)); ?>
 
     </div>
 
     <div class="user-statistics">   
     <h4>Statistik:</h4>
-
+<!-- Kör funktionen renderSingleUser från singleUserView, tar in prepared statement/funktionen getUserWithItem från items-model.php som argument. De "knyts ihop" -->
         <?php $singleUserView->renderUserStats($itemsModel->getItemsFromUser($id)); ?>
 
     </div>
@@ -43,7 +43,7 @@ include 'partials/header.php';
 
 <h3>Säljarens produkter:</h3>
 <div class="user-products-container">   
-
+<!-- Kör funktionen renderSingleUsersItems från userItemsView, tar in prepared statement/funktionen getItemsFromUser från items-model.php som argument. De "knyts ihop" -->
     <?php $userItemsView->renderSingleUsersItems($itemsModel->getItemsFromUser($id)); ?>
 
 </div>
