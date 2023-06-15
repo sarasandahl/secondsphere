@@ -3,7 +3,7 @@
 //renderar en vara genom get i roten. Skriver ut den information jag vill åt med tillhörande information om säljare samt varans kvalité med infotext via hover-effekt
 class SingleItemView {
 
-    public function renderSingleItem($item):void {
+    public function renderSingleItem(array $item):void {
         echo "<p> 
             <img src='{$item['image']}' alt='image' style='float:left;height='600px; ><br>
             {$item['product_name']}<br>

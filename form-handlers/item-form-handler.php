@@ -12,7 +12,7 @@ if (isset($_POST['product_name'], $_POST['brand'], $_POST['type'], $_POST['descr
     $size = filter_var($_POST['size'], FILTER_SANITIZE_SPECIAL_CHARS);
     $price = filter_var($_POST['price'], FILTER_SANITIZE_NUMBER_INT);
     $conditionId = filter_var($_POST['conditionId'], FILTER_SANITIZE_NUMBER_INT);
-    $image = filter_var($_POST['image'], FILTER_SANITIZE_SPECIAL_CHARS);
+    $image = filter_var($_POST['image'], FILTER_SANITIZE_URL);
     $itemModel->addItem($userId,$productName,$brand,$type,$description,$size,$price,$conditionId,$image);
 }
 
