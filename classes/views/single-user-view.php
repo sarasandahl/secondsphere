@@ -11,7 +11,7 @@ class SingleUserView {
         </p>";
     }
 
-    //funktionen tar statistik kring säljarens varor efter en ihopkoppling av tabellerna. Ligga i egen instans?
+    //funktionen tar statistik kring säljarens varor efter en ihopkoppling av tabellerna
     public function renderUserStats(array $items):void {
         
         $amountOfItems = count($items); //räknar antalet produkter totalt

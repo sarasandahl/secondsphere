@@ -11,7 +11,7 @@ class ItemsModel extends DB {
         return $this->getAll($this->table);
     }
 
-    //Används för single-item sidan. visar en vara med mer tillhärande data från tabellerna users och quality. renderas i single-item-view
+    //Används för single-item sidan. visar en vara med mer tillhörande data från tabellerna users och quality. renderas i single-item-view
     public function getOneItemWithUsersAndConditions(int $id) {
         $query = "SELECT items.id,items.product_name,items.image,items.brand,items.description,items.size,items.price,conditions.quality,conditions.meaning,users.first_name,users.last_name FROM users JOIN items ON users.id=items.userId JOIN conditions ON conditions.id=items.conditionId";
         $stmt = $this->pdo->prepare($query);
@@ -28,7 +28,7 @@ class ItemsModel extends DB {
         $stmt->execute([$userId, $productName, $brand, $type, $description, $size, $price, $conditionId, $image]);
     }
 
-    //Används för single-user-sidan. visar en vara med mer tillhärande data från tabellerna users och quality. renderas i single-user-view
+    //Används för single-user-sidan. visar en vara med mer tillhörande data från tabellerna users och quality. renderas i single-user-view
     public function getUserWithItem(int $id) {
         $query = "SELECT items.id,users.id,users.first_name,users.last_name,users.email,items.product_name,items.price,items.sold FROM users LEFT JOIN items ON users.id=items.userId";
         $stmt = $this->pdo->prepare($query);
@@ -38,7 +38,7 @@ class ItemsModel extends DB {
         return array_merge(...$result);
     }
 
-    //visar alla varor hos en säljare på single.user-sidan
+    //Används för att hämta användares statistik och varor på single-user-sidan
     public function getItemsFromUser(int $id) {
         $query = "SELECT users.id,items.image,items.product_name,items.price,items.sold FROM users LEFT JOIN items ON users.id=items.userId";
         $stmt = $this->pdo->prepare($query);
@@ -48,7 +48,7 @@ class ItemsModel extends DB {
         return $result; 
     }
 
-    //Uppdatera vara till såld genom formulär och scroll
+    // Uppdatera vara till såld genom formulär 
     function uptadeItemToSold(int $id) {
         $query = "UPDATE items SET sold = 1 WHERE id = ?";
         $stmt = $this->pdo->prepare($query);
