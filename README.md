@@ -1,15 +1,23 @@
 # secondsphere
 Slutprojekt Systemutveckling PHP
 
-Detta projekt är skapat i PHP med html-output, där jag har använt MyPhpAdmin som gränssnitt för att jobba mot min databas i mysql. 
-Projektet är strukturerat med model-view-controler(MVC) där filerna i roten utgör controllers. Jag försöker jobba objek-orienterat(enligt OOP) med klasser och arv. Projektet inkluderar validering och sanering i input-fält från användaren samt typräkring i koden. 
+PHP, PhpMyAdmin
+
+Om projektet: 
+
+Detta projekt är skapat i PHP med html-output, där jag har använt PhpMyAdmin som gränssnitt för att jobba mot min databas i mysql. 
+Projektet är strukturerat med model-view-controller(MVC) där filerna i roten är det som utgör mina controllers. Under classes i de olika modellerna återfinns mina prepared statements som jag använder för att hämta data från databasen genom PDO.
+Jag försöker jobba objekt-orienterat(enligt OOP) med klasser, objekt, arv, public, private och protected samt typsäkrad kod. 
+Projektet inkluderar validering och sanering i användarens input i forms, detta återfinns i form-handlers.
 
 ----------------------------------------------------------------------
 
 Case:
+
 En secondhandbutik NAMN behöver en webbtjänst för att hålla koll på sina plagg och vem som lämnat in dem. Detta är en sådan butik där en person (vi kallar dem säljare) kan lämna in kläder och butiken säljer dem, tar en viss del av försäljningen och en viss del går tillbaka till den som lämnar in kläderna (säljaren).
 
 Uppgift:
+
 Vi ska bygga en första prototyp för att illustrera några av de grundläggande funktionerna:
 1. Lista säljare alfabetiskt 
 2. Lista plagg 
@@ -34,12 +42,14 @@ Databasstruktur:
 ![Bild på databas-struktur](schema-struktur.png)
 
 Relationer:
+
 - Bgränsningnamn - user-item | userId | secondsphere | users | id
 - Begränsningsnamn - condition-item | conditionsId | secondsphere | conditions | id
 
 ----------------------------------------------------------------------
 
 Bild url:er som används i koden:
+
 - väska (används för att lägga upp på alla bilder): 
 https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGFuZGJhZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60
 - Flera Jeans på galge (används som bakgrund i header och footer): 
